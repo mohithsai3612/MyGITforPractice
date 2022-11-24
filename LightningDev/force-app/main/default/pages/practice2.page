@@ -1,0 +1,17 @@
+<apex:page showHeader="false">
+    <apex:form >
+        <apex:pageBlock title="CALCULATOR">
+            <apex:pageBlockSection columns="1">
+                <apex:inputText label="ENTER THE FIRST NUMBER"/>
+                <apex:inputText label="ENTER THE SECOND NUMBER"/>
+                <apex:inputText label="ENTER THE THIRD NUMBER"/>
+                <apex:selectRadio >
+                    <apex:selectOption itemLabel="GREATER" itemValue="G"/>
+                    <apex:selectOption itemLabel="SMALLER" itemValue="S"></apex:selectOption>
+                </apex:selectRadio>
+                <apex:commandButton value="CALCULATE"/>
+                <apex:outputText value="THE RESULT IS"></apex:outputText>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

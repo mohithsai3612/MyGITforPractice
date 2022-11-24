@@ -1,0 +1,17 @@
+<aura:component >
+    <aura:attribute name="cempname" type="string"/>
+    <aura:attribute name="cempphone" type="string"/>
+    <aura:attribute name="cempdob" type="Date"/>
+    
+    <aura:method name="Methodabc" action="{!c.callme}">
+        <aura:attribute name="mempname" type="string"/>
+        <aura:attribute name="mempphone" type="string"/>
+         <aura:attribute name="mempdob" type="Date"/>
+    </aura:method>
+    
+    <lightning:card title="Action Override Child">
+        <b>Employee Name:</b>   {!v.cempname}<p></p>
+       <b>Employee Phone:</b>   {!v.cempphone}<p></p>
+        <b>Employee DOB :</b>   {!v.cempdob}
+    </lightning:card>
+</aura:component>

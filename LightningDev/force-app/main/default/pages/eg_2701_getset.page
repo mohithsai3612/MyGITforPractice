@@ -1,0 +1,19 @@
+<apex:page controller="eg_2701_getset" showHeader="false">
+    <apex:form >
+        <apex:pageBlock title="calculator">
+         <apex:pageBlockSection title="greater or smaller calculator" columns="1">
+             <apex:inputText label="enter the first number" value="{!num1}"/>
+             <apex:inputText label="enter the second number" value="{!num2}"/>
+             <apex:inputText label="enter the third number" value="{!num3}"/>
+             <apex:selectRadio label="select your choice" value="{!choice}">
+                 <apex:selectOption itemlabel="greater" itemValue="gt"/>
+                     <apex:selectOption itemLabel="smaller" itemValue="sm">
+                 </apex:selectOption>
+             </apex:selectRadio>
+             <apex:commandButton value="click here to calculate" action="{!mastercalc}"/>
+             <apex:outputText label="result" value="{!result}">
+             </apex:outputText>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

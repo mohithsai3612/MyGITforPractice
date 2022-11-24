@@ -1,0 +1,18 @@
+<aura:component >
+    <aura:attribute name="num1" type="Decimal"/>
+    <aura:attribute name="num2" type="Decimal"/>
+    <aura:attribute name="num3" type="Decimal"/>
+    <aura:attribute name="sim" type="Decimal"/>
+    <aura:attribute name="maturity" type="Decimal"/>
+    <lightning:card title="simple Interest calculator">
+        <lightning:input label="enter the amount" value="{!v.num1}"/>
+        <lightning:input label="enter the interestrate" value="{!v.num2}"/>
+        <lightning:input label="enter the time" value="{!v.num3}"/>
+        <lightning:button label="calc" onclick="{!c.calcme}"></lightning:button>
+        <p></p>
+        <b>The interest is : {!v.sim}</b>
+        <p></p>
+        <b>The total amount is : {!v.maturity}</b>
+    </lightning:card>
+	
+</aura:component>

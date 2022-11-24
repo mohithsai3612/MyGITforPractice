@@ -1,0 +1,45 @@
+<aura:component controller="Accountprimitive">
+    <aura:attribute name="cname" type="string"/>
+    <aura:attribute name="cphone" type="string"/>
+    <aura:attribute name="cfax" type="string"/>
+    <aura:attribute name="cindustry" type="string"/>
+    <aura:attribute name="crating" type="string"/>
+    
+    <aura:attribute name="cid" type="string"/>
+    
+    <lightning:card title="Account" iconName="standard:account">
+        <aura:set attribute="title">
+            <h1><b>Account</b></h1>
+            New Account
+        </aura:set>
+        <aura:set attribute="actions">
+            <lightning:buttonGroup>
+            <lightning:button title="Submit" onclick="{!c.calme}"/>
+            <lightning:button title="clear" onclick="{!c.clearme}"/>
+            </lightning:buttonGroup>
+        </aura:set>
+        
+        <lightning:layout>
+        <lightning:layoutItem size="6" padding="around-small">
+            <lightning:input label="Enter Account Name" value="{!v.cname}"/>
+            <lightning:input label="Enter Account Phone" value="{!v.cphone}"/>
+            <lightning:input label="Enter Account fax" value="{!v.cfax}"/>
+            <lightning:input label="Enter Account industry" value="{!v.cindustry}"/>
+            <lightning:input label="Enter Account " value="{!v.crating}"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        
+        <lightning:layout>
+        <lightning:layoutItem size="6">
+            <b>Account ID:</b> {!v.cid} <p></p>
+            <b>Account Name:</b> {!v.cname} <p></p>
+            <b>Account Phone:</b> {!v.cphone} <p></p>
+            <b>Account Fax:</b> {!v.cfax} <p></p>
+            <b>Account Industry:</b> {!v.cindustry} <p></p>
+            <b>Account Rating:</b> {!v.crating} <p></p>
+            </lightning:layoutItem>
+        </lightning:layout>
+        
+    </lightning:card>
+	
+</aura:component>

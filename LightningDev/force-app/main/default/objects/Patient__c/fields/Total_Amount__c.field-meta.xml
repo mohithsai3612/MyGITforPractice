@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Amount__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Department__c, &quot;Ortho&quot;),Registration_fee__c*0.85+ Registration_fee__c,
+IF(ISPICKVAL(Department__c, &quot;pedia&quot;), Registration_fee__c*1.21+ Registration_fee__c,
+IF(ISPICKVAL(Department__c, &quot;Cardio&quot;), Registration_fee__c*1.33+ Registration_fee__c,
+IF(ISPICKVAL(Department__c, &quot;dermatology&quot;), Registration_fee__c*1.56+ Registration_fee__c,IF(ISPICKVAL(Department__c, &quot;hematology&quot;), Registration_fee__c*0.100+ Registration_fee__c,0)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

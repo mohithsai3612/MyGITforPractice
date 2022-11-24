@@ -1,0 +1,37 @@
+<aura:component controller="search_contact_LC" >
+    <aura:attribute name="st" type="String"/>
+    <aura:attribute name="scon" type="Contact[]"/>
+    
+    <aura:attribute name="clms" type="list"/>
+    <aura:handler name="init" value="{!this}" action="{!c.creme}"/>
+    
+    <lightning:card title="SearchContact" iconName="standard:contact">
+        <lightning:input label="Enter Keyword to Search" value="{!v.st}"/>
+        <lightning:button label="search" variant="brand" onclick="{!c.searchme}"/>
+        <p></p>
+        <b>**********result**********</b>
+        <p></p>
+        <lightning:layout multipleRows="true">
+        <aura:iteration items="{!v.scon}" var="a">
+            
+            <lightning:layoutItem size="3" padding="around-small">
+                <div class="mybox">
+                Name:{!a.Name}<br/>
+                Phone:{!a.Phone}<br/>
+                Fax:{!a.Fax}<br/>
+                    </div>
+                </lightning:layoutItem>
+            
+            </aura:iteration>
+        </lightning:layout>
+        <p></p>
+        <b>**********result in table**********</b>
+        <p></p>
+        <aura:if isTrue="{!v.scon.length>0}">
+<lightning:dataTable keyField="id" data="{!v.scon}" columns="{!v.clms}" hideCheckboxColumn="true"/>
+        </aura:if>
+        
+        
+        
+    </lightning:card>
+</aura:component>

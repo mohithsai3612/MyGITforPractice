@@ -1,0 +1,8 @@
+.THIS .mybox
+{
+    border-style: token(brder);
+    border-width: token(bdrwdth);
+    font-family: token(fntfam);
+    background-color: token(backgrclr);
+    color: token(fntclr);
+}

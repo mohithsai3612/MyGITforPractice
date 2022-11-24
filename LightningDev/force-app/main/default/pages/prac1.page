@@ -1,0 +1,74 @@
+<apex:page standardController="Account" showHeader="false">
+ <apex:tabPanel >
+ <apex:tab label="Account Input" styleClass="Mytab">
+     <apex:form >
+         <apex:pageBlock >
+         <apex:pageBlockSection >
+             <apex:inputField value="{!account.name}" style="background-color:orange; font-sytle:italic; font-size:12px; color:red"/>
+         <apex:inputField value="{!account.phone}" styleClass="Myinp"/>
+         <apex:inputField value="{!account.fax}" styleClass="Myinp"/>
+             <apex:inputField value="{!account.Industry}" styleClass="Myinp"/>
+         <apex:inputField value="{!account.rating}" styleClass="Myinp"/>
+             <style>
+                 .Myinp
+                 {
+                 background-color:tomato;
+                 font-sytle:italic;
+                 font-size:12px;
+                 color:black;
+                 }
+                 .Mytab
+                 {
+                 background-color:pink;
+                 border-style: outset;
+                 border-width: 2px;
+                 border-color: green;
+                 }
+             </style>
+             <apex:commandButton value="click here to save" title="please save" action="{!save}"/>
+      </apex:pageBlockSection>
+         </apex:pageBlock>
+             </apex:form>
+     </apex:tab>
+     <apex:tab label="To Be Decided Later">
+     </apex:tab>
+     <apex:tab label="Account Output">
+         <apex:pageBlock title="Account Details">
+        <apex:pageBlockSection title="Basic Details" columns="1">
+            <apex:outputField value="{!Account.Name}"/>
+            <apex:outputField value="{!Account.phone}"/>
+            <apex:outputField value="{!Account.fax}"/>
+            <apex:outputField value="{!Account.sic}"/>
+            <apex:outputField value="{!Account.rating}"/>
+            <apex:outputField value="{!Account.type}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Related contact details" columns="1">
+            <apex:relatedList list="contacts"/>
+            <apex:relatedList list="cases"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Custom Table-Contact Details">
+        <apex:pageBlockTable value="{!account.contacts}" var="AC">
+            <apex:column value="{!AC.firstname}"/>
+            <apex:column value="{!AC.lastname}"/>
+            <apex:column value="{!AC.phone}"/>
+            <apex:column value="{!AC.email}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Related details">
+        <apex:pageBlockSection title="To Be Decided later">
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="To Be Decided later">
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock title="To be Decided">
+        <apex:pageBlockSection title="To Be Decided later">
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="To Be Decided later">
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+     </apex:tab>
+    </apex:tabPanel>
+</apex:page>

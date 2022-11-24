@@ -1,0 +1,7 @@
+<apex:page >
+    <apex:pageBlock TITLE="GENERAL INFORMATION">
+        <apex:pageBlockSection title="VERY FIRST PAGE">
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock TITLE="IMPORTANT INFORMATION"/>
+</apex:page>

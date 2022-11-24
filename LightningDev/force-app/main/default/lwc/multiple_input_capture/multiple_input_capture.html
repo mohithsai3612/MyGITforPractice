@@ -1,0 +1,29 @@
+<template>
+    <lightning-card>
+        <lightning-layout vertical-align="center" class="x-large">
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <lightning-input name="fullname" type="text" onchange={fn} placeholder="enter your Name" variant="hidden-label" id="full"></lightning-input>
+            <lightning-input name="Email" type="email" onchange={em} placeholder="enter your email" variant="hidden-label"></lightning-input>
+            <lightning-input type="number" name="number" onchange={ph} placeholder="enter your Phone" variant="hidden-label"></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+    
+        <div style="padding: 10px;">
+            <table border="1">
+                <tr>
+                    <td>fullname :</td>
+                    <td>{uppercase}</td>
+                </tr>
+                <tr>
+                    <td>email :</td>
+                    <td>{Email}</td>
+                </tr>
+                <tr>
+                    <td>Phone :</td>
+                    <td>{Phone}</td>
+                </tr>
+            </table>
+        </div>
+    </lightning-card>
+
+</template>

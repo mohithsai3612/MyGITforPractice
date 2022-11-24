@@ -1,0 +1,38 @@
+<aura:component >
+    <aura:attribute name="num1" type="integer"/>
+    <aura:attribute name="num2" type="integer"/>
+    <aura:attribute name="result" type="integer"/>
+    <aura:attribute name="flag" type="boolean" default="false"/>
+    
+	<lightning:layout multipleRows="true">
+    <lightning:layoutItem size="12">
+        <lightning:card title="Account" iconName="standard:account">
+            <lightning:input label="enter the first number" value="{!v.num1}"/>
+            <lightning:input label="enter the second number" value="{!v.num2}"/>
+            
+            <lightning:button label="submit" onclick="{!c.calme}"/>
+            <lightning:button label="clear" onclick="{!c.clearme}"/>
+        </lightning:card>
+        </lightning:layoutItem>
+        
+        
+        <lightning:layoutItem size="6">
+            <aura:if isTrue="{!v.flag}">
+        <lightning:card title="Contact" iconName="standard:contact">
+            the result is : {!v.result}
+        </lightning:card>
+                </aura:if>
+        </lightning:layoutItem>
+        
+        
+        <lightning:layoutItem size="6">
+            <aura:if isTrue="{!v.flag}">
+        <lightning:card title="Opportunity" iconName="standard:opportunity">
+            This Card is With 50%
+        </lightning:card>
+            </aura:if>
+        </lightning:layoutItem>
+    </lightning:layout>
+    
+    
+</aura:component>

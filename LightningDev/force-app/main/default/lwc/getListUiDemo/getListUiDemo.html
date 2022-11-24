@@ -1,0 +1,22 @@
+<template>
+   <lightning-card title="Get LIST Ui Demo">
+    <table>
+        <thead>
+            <tr>
+                <th>Account Id</th>
+                <th>Account FirstName</th>
+                <th>Account Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={accresult} for:item="item">
+                <tr key={item.id}>
+                    <td>{item.id}</td>
+                    <td>{item.fields.Name.value}</td>
+                    <td>{item.fields.Type.value}</td>
+                </tr>
+            </template>
+        </tbody>
+    </table>
+   </lightning-card> 
+</template>

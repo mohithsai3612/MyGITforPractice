@@ -1,0 +1,14 @@
+<apex:page showHeader="false">
+    <apex:form >
+       <apex:pageBlock title="simple interest calculator">
+           <apex:pageBlockSection columns="1">
+               <apex:inputText label="enter the Principle"/>
+               <apex:inputText label="enter the term of investment"/>
+               <apex:inputText label="enter the investment rate"/>
+                   <apex:commandButton value="Calculate"/>
+               <apex:outputText label="the interest accumlated is"/>
+               <apex:outputText label="the total maturity is"/>
+           </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

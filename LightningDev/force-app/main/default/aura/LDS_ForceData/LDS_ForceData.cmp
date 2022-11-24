@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="myacc" type="Account"/>
+    <aura:attribute name="myaccrec" type="Account"/>
+    <aura:handler name="init" value="{!this}" action="{!c.inime}"/>
+    
+    <lightning:card title="LDS ForceData-GetNewRecord">
+        <force:recordData aura:id="md" recordId="{!v.recordId}" fields="Name,Phone,Fax,Industry,Rating" targetFields="{!v.myacc}" targetRecord="{!v.myaccrec}"/>
+        <lightning:input label="AccountName" value="{!v.myacc.Name}"/>
+        <lightning:input label="Phone" value="{!v.myacc.Phone}"/>
+        <lightning:input label="Fax" value="{!v.myacc.Fax}"/>
+        <lightning:input label="Industry" value="{!v.myacc.Industry}"/>
+        <lightning:input label="Rating" value="{!v.myacc.Rating}"/>
+
+        <lightning:button label="savee" onclick="{!c.saveme}" variant="brand"/>
+        
+    </lightning:card>
+</aura:component>

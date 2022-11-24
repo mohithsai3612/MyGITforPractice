@@ -1,0 +1,38 @@
+<apex:page standardController="Account" sidebar="false" showHeader="false" >
+    <apex:pageBlock title="Account Details">
+        <apex:pageBlockSection title="Basic Details" columns="1">
+            <apex:outputField value="{!Account.Name}"/>
+            <apex:outputField value="{!Account.phone}"/>
+            <apex:outputField value="{!Account.fax}"/>
+            <apex:outputField value="{!Account.sic}"/>
+            <apex:outputField value="{!Account.rating}"/>
+            <apex:outputField value="{!Account.type}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Related contact details" columns="1">
+            <apex:relatedList list="contacts"/>
+            <apex:relatedList list="cases"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Custom Table-Contact Details">
+        <apex:pageBlockTable value="{!account.contacts}" var="AC">
+            <apex:column value="{!AC.firstname}"/>
+            <apex:column value="{!AC.lastname}"/>
+            <apex:column value="{!AC.phone}"/>
+            <apex:column value="{!AC.email}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Related details">
+        <apex:pageBlockSection title="To Be Decided later">
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="To Be Decided later">
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock title="To be Decided">
+        <apex:pageBlockSection title="To Be Decided later">
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="To Be Decided later">
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+</apex:page>

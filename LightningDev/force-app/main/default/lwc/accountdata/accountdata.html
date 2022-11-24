@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="Account Data Display" icon-name="standard:account">
+        <template for:each={mohith.data} for:item="m">
+        <p key={m.id}> <b>Account Name:</b> {m.Name}-----------> <b>Account Phone:</b> {m.Phone}--------> <b>Account Industru:</b> {m.Industry}</p>
+        </template>
+    </lightning-card>
+</template>

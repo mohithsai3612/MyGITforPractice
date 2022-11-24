@@ -1,0 +1,11 @@
+<apex:page controller="http_eg1">
+    <apex:form id="op">
+    <apex:inputTextarea value="{!ipaddress}" cols="100" rows="20" />
+        <apex:commandButton value="Get Details"  action="{!calltrace}" reRender="op"/>
+        <apex:inputTextarea value="{!body}" id="op1" cols="100" rows="20"/>
+        <apex:dataTable value="{!res}" var="a" rules="rows" width="700" frame="border" cellpadding="10">
+        <apex:column Value="{!a}" headerValue="key"/>
+            <apex:column Value="{!res[a]}" headerValue="value"/>
+        </apex:dataTable>
+    </apex:form>
+</apex:page>

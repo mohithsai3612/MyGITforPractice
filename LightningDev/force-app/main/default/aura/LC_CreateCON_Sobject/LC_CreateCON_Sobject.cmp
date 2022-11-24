@@ -1,0 +1,44 @@
+<aura:component controller="CreateCon_Sobject" >
+    <aura:attribute name="conc" type="Contact" default="{sObjectType:'Contact'}"/>
+    <aura:attribute name="st" type="string"/>
+    <aura:attribute name="Accon" type="Account[]"/>
+    
+    <lightning:card title="Contact" iconName="standard:contact">
+        <lightning:input label="first Name" value="{!v.conc.FirstName}"/>
+        <lightning:input label="Last Name" value="{!v.conc.LastName}"/>
+        <lightning:input label="Fax" value="{!v.conc.Fax}"/>
+        <lightning:input label="Phone" value="{!v.conc.Phone}"/>
+        <lightning:input label="Lead Source" value="{!v.conc.LeadSource}"/>
+        <lightning:input label="Birthdate" value="{!v.conc.Birthdate}" type="Date"/>
+        
+        <aura:set attribute="actions">
+            <lightning:button label="Submit" value="{!c.Callme}"/>
+        </aura:set>
+        </lightning:card>
+    
+    <lightning:card title="Account Search">
+        <lightning:input label="enter the keyword" value="{!v.st}"/>
+        <lightning:button label="Click here" onclick="{!c.clickme}"/>
+        <p></p>
+        <b>**********Result***********</b>
+        <p></p>
+        
+        <lightning:layout multipleRows="true">
+        <aura:iteration items="{!v.Accon}" var="a">
+            </aura:iteration>
+            
+            <lightning:layoutItem size="3" padding="around-small">
+               <div class="mybox">
+                Name:{!a.name} <br></br>
+                Phone:{!a.Phone}<br></br>
+                Fax:{!a.Fax}<br></br>
+                Industry:{!a.Industry}<br></br>
+                Rating:{!a.Rating}<br></br>
+                   </div>
+            </lightning:layoutItem>
+                
+        </lightning:layout>
+        
+    </lightning:card>
+    
+</aura:component>

@@ -1,0 +1,12 @@
+<aura:component controller="ApplicationEvent">
+    <aura:attribute name="caccName" type="string"/>
+    <aura:attribute name="caccInd" type="string"/>
+    
+    <aura:registerEvent name="waste" type="c:LE_AppilicationEvent"/>
+    
+    <lightning:card title="Account Search" iconName="standard:account">
+        <lightning:input label="Enter the Account Name" value="{!v.caccName}" type="search"/>
+        <lightning:input label="enter the industry" value="{!v.caccInd}" type="search"/>
+        <lightning:button label="search" onclick="{!c.searchme}"/>
+    </lightning:card>
+</aura:component>

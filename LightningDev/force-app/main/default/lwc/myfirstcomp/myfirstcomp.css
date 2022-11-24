@@ -1,0 +1,10 @@
+.mybox
+{
+    color: antiquewhite;
+    background-color: dodgerblue;
+    border-color: black;
+    border-radius: 2px;
+    border-left: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+}

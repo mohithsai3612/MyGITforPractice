@@ -1,0 +1,13 @@
+<apex:page controller="xml_deserialize">
+    <apex:form >
+    <apex:pageBlock >
+        <apex:panelGrid columns="3" width="600">
+        <apex:inputTextarea value="{!xmlstring}" rows="6" cols="100"/>
+        <apex:panelGrid >
+           <apex:commandButton value="Convert" action="{!xml_deserialize}" reRender=""/>
+           </apex:panelGrid>
+            <apex:inputTextarea value="{!parsedata}" rows="6" cols="100"/>
+        </apex:panelGrid>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

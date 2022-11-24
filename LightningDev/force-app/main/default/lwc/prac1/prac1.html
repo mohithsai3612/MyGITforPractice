@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Data Input" icon-name="standard:contact">
+        <lightning-input label="Enter Name" onchange={capnme} ></lightning-input>
+        <lightning-input label="Enter Phone" onchange={capphe}></lightning-input>
+        <lightning-button label="submit" variant="brand" onclick={callme}></lightning-button>
+
+        <p>****************Message from system******************</p>
+        Good Morning {nam}<p></p>
+        your phone {phn}
+    </lightning-card>
+
+    <lightning-card title="Find the Grater Number">
+        <lightning-input label="Enter the First Number" onchange={fn} value={num1}></lightning-input>
+        <lightning-input label="Enter the second Number" onchange={sn} value={num2}></lightning-input>
+        <lightning-input label="Enter the third Number" onchange={tn} value={num3}></lightning-input>
+        <lightning-button-group>
+            <lightning-button label="sumbit" onclick={calme} variant="brand"></lightning-button>
+            <lightning-button label="clear" onclick={clme} variant="destructive"></lightning-button>
+        </lightning-button-group>
+
+        <b>**************result**************</b>
+        <b>The Grater Number :</b> {result}
+    
+    </lightning-card>
+</template>

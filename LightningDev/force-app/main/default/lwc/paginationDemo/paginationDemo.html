@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Pagenation Contact">
+        <div class="slds-m-around_x-small">
+            <template if:true={totalcontacts}>
+                <template for:each={visiblecontacts} for:item="con">
+                    <p key={con.Id}>{con.Name}</p>
+                </template>
+            </template>
+            <div slot="footer" class="slds-m-horizontal_x-small">
+                <c-pagination records={totalcontacts} onupdate={updatecontroller}></c-pagination>
+            </div>
+        </div>
+    </lightning-card>
+</template>

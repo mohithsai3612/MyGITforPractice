@@ -1,0 +1,20 @@
+<aura:component >
+    <aura:attribute name="camount" type="Decimal"/>
+    <aura:attribute name="cterm" type="Decimal"/>
+    <aura:attribute name="cinterest" type="Decimal"/>
+    
+    <aura:method name="simpleInterest" action="{!c.callme}">
+        <aura:attribute name="mamount" type="Decimal"/>
+        <aura:attribute name="mterm" type="Decimal"/>
+        <aura:attribute name="minterest" type="Decimal"/>
+    </aura:method>
+    
+    <lightning:card title="child screen">
+        <b>Amount</b> : {!v.camount}<p></p>
+        <b>Term</b> : {!v.cterm}<p></p>
+        <b>Rate of Interest</b> : {!v.cinterest}<p></p>
+        
+        <lightning:input label="The simple Interest" aura:id="rst"/>
+        <lightning:input label="The Maturity Amount" aura:id="mat"/>
+    </lightning:card>
+</aura:component>

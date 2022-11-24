@@ -1,0 +1,26 @@
+<aura:component controller="search_oppurchunity_LC">
+    <aura:attribute name="OPP" type="Opportunity" default="{sObjectType:'Opportunity'}"/>
+    <aura:attribute name="op" type="string"/>
+    <aura:attribute name="OPPO" type="Opportunity[]"/>
+    
+    <aura:attribute name="clms" type="list"/>
+    <aura:handler name="init" value="{!this}" action="{!c.creme}"/>
+    
+    <lightning:card title="Opportunity" iconName="standard:opportunity">
+        <lightning:input label="Enter the name" value="{!v.OPP.Name}"/>
+        <lightning:input label="Enter the closedate" type="date" value="{!v.OPP.CloseDate}"/>
+        <lightning:input label="Enter the stageName" value="{!v.OPP.StageName}"/>
+        <lightning:input label="Enter the Amount" value="{!v.OPP.Amount}"/>
+        <p></p>
+        
+        <lightning:input label="Enter the Keyword" value="{!v.op}"/>
+        
+        <lightning:button label="submit" onclick="{!c.callme}"/>
+        
+        <aura:if isTrue="{!v.OPPO.length>0}">
+<lightning:dataTable keyField="id" data="{!v.OPPO}" columns="{!v.clms}" hideCheckboxColumn="true"/>
+        </aura:if>
+        
+    </lightning:card>
+	
+</aura:component>

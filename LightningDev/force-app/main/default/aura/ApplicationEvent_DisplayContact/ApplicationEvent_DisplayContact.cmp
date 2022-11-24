@@ -1,0 +1,9 @@
+<aura:component controller="ApplicationEvent" >
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="clmn" type="List"/>
+    
+    <aura:handler event="c:ApplicationEvent" action="{!c.displayme}"/>
+    
+    <lightning:card title="Contact Display" iconName="standard:contact"/>
+    <lightning:dataTable keyField="Id" data="{!v.data}" columns="{!v.clmn}"/>
+</aura:component>

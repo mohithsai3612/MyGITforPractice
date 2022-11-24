@@ -1,0 +1,13 @@
+<aura:component >
+    <lightning:card>
+        <lightning:input label="enter the principalamount" aura:id="in1"></lightning:input>
+        <lightning:input label="enter the interestrate" aura:id="in2"></lightning:input>
+        <lightning:input label="enter the time" aura:id="in3"></lightning:input>
+        
+        <lightning:button label="calculate" onclick="{!c.calcme}"></lightning:button>
+        <p></p>
+        <lightning:input label="simpleinterest" aura:id="rest"></lightning:input>
+        <lightning:input label="totalmaturity" aura:id="mut"></lightning:input>
+    </lightning:card>
+	
+</aura:component>

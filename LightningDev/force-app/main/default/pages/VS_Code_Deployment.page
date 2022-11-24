@@ -1,0 +1,20 @@
+<apex:page >
+    <apex:form >
+    <apex:pageblock title="VSC Deployment">
+        <apex:pageBlockSection columns="1">
+        <b> Hi this page is New Page For Visual Code Deployment</b><p></p>
+            <apex:inputText label="Enter The Number"/>
+            <apex:commandButton value="VS Code" onclick="wishme()"/>
+        </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+
+
+<script>
+    function wishme()
+    {
+    alert('Hi Hope that you are understanding Believe the things are going good');  
+    }
+    </script>
+
+</apex:page>

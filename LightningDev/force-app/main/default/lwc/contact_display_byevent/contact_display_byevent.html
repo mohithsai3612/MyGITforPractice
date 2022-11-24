@@ -1,0 +1,18 @@
+<template>
+    <lightning-card>
+        <c-contact_create_event onsumit={display}></c-contact_create_event>
+    </lightning-card>
+    <p></p><p></p>
+    <lightning-card title="Contact Display With Id" if:true={recordId}>
+        <lightning-layout>
+            <lightning-layout-item size="6" padding="around-small">
+                <p></p>
+                <b>Contact First Name Entered is</b> : {confn}<p></p>
+                <b>Contact Last Name Entered is</b> : {conln}<p></p>
+                <b>Contact Email Entered is</b> : {conem}<p></p>
+                <b>Contact Phone Entered is</b> : {conpn}<p></p>
+                <b>Contact Id is</b> : {recordId}
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

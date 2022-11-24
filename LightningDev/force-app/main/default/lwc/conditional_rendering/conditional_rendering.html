@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="User Details" icon-name="utility:user">
+        <lightning-button label={actionbuttonlabel} onclick={togglechange} slot="actions"></lightning-button>
+        <div class="slds-p-around_medium">
+         <template if:true={showdetails}>
+                <p>user: {userId}</p><br/>
+             <p>Name: {Name}</p>
+         </template>
+         
+        </div>
+    </lightning-card>
+</template>

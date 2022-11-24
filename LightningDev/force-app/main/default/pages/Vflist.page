@@ -1,0 +1,7 @@
+<apex:page controller="listtrain">
+    <apex:form >
+    <apex:selectList size="1">
+        <apex:selectOption value="{!options}"></apex:selectOption>
+        </apex:selectList>
+    </apex:form>
+</apex:page>

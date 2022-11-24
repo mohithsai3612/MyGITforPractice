@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Data Type">
+        <b>******Primitive Data Type</b><p></p>
+        {name}          <p></p>
+        {age}           <p></p>
+        {Temperature}   <p></p>
+
+       <b> *********Array Data Type**********</b> <p></p>
+       <b>****way1 template for each</b> <p></p>
+       <template for:each={cities} for:item=c>
+           <p key={c}>{c}</p>
+       </template>
+
+       <b>way2 Template Iterator</b><p></p>
+       <template iterator:item={cities}>
+           <p key={item.value}>{item.value}  </p>
+       </template><p></p>
+       <b>*********Complex Json Data Type*********</b><p></p>
+       <template for:each={students} for:item=s>
+    <p key={s}>Student Name:{s.Name}----> Student Age:{s.Age}------>Student City:{s.City}
+    </p>
+       </template>
+    </lightning-card>
+</template>

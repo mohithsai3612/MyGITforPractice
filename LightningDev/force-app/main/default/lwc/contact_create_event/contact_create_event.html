@@ -1,0 +1,13 @@
+<template>
+  <lightning-card title="Contact Creation">
+      <lightning-layout>
+          <lightning-layout-item size="6" padding="around-small">
+           <lightning-input label="Contact First Name" onchange={callfn}></lightning-input>
+           <lightning-input label="Contact Last Name" onchange={callln}></lightning-input>
+           <lightning-input label="Contact Phone" onchange={callpn}></lightning-input>
+           <lightning-input label="Contact Email" onchange={callem}></lightning-input>
+           <lightning-button label="Save" variant="SUCCESS" onclick={sum}></lightning-button>
+          </lightning-layout-item>
+      </lightning-layout>
+  </lightning-card>  
+</template>

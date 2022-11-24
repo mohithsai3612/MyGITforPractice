@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="obj" type="Object"/>
+    <aura:attribute name="error" type="string"/>
+    <lightning:navigation aura:id="navService"/>
+    
+    <force:recordData aura:id="rcdel" recordId="{!v.recordId}" fields="Name" targetFields="{!v.obj}" targetError="{!v.error}"/>
+	<lightning:card title="LDS_Delete">
+        <lightning:button label="Delete" onclick="{!c.Dellme}" variant="Destructive"/>
+    </lightning:card>
+</aura:component>

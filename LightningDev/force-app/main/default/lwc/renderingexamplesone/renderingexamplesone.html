@@ -1,0 +1,12 @@
+<template>
+   <lightning-card title="Rendering examples" icon-name="standard:dashboard_component">
+    <template if:true={showtext}>
+        <div class="slds-var-p-around_medium">
+            <b>Your are seeing IFtrue renderer</b>
+        </div>
+    </template>
+    
+    <lightning-button label="clickme" onclick={texthandler} variant="brand"></lightning-button>
+   <lightning-button label="Hideme" onclick={hidedetails} variant="Destructive"></lightning-button>
+</lightning-card> 
+</template>

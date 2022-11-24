@@ -1,0 +1,13 @@
+<template>
+   <lightning-card title="Contact Search" icon-name="standard:contact">
+       <lightning-input label="Enter the Data" type="search" onchange={searchme}></lightning-input>
+    <template for:each={contacts.data} for:item="con">
+        <p key={con.id}> Contact FirstName: {con.FirstName}----> LastName: {con.LastName}-----> Phone: {con.Phone}-----> Email:{con.Email}</p>
+    </template>
+
+    <p></p>
+    <b>********Data table*******</b>
+
+    <lightning-datatable key-field="id" data={contacts.data} columns={col}></lightning-datatable>
+   </lightning-card> 
+</template>

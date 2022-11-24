@@ -1,0 +1,6 @@
+<apex:page controller="xml_deserialize_fromfile">
+    <apex:form >
+    <apex:inputFile value="{!xmlfile}" fileName="dummy"></apex:inputFile>
+        <apex:commandButton value="Click here insert" action="{!callme}"/>
+    </apex:form>
+</apex:page>

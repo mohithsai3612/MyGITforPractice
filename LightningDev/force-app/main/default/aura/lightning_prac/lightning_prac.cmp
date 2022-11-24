@@ -1,0 +1,26 @@
+<aura:component >
+    <aura:attribute name="flag" type="boolean" default="false"/>
+   <lightning:layout>
+    <lightning:layoutItem size="6">
+       <lightning:card>
+           <lightning:input label="Enter the firstNumber" aura:id="in1"/>
+           <lightning:input label="Enter the secondNumber" aura:id="in2"/>
+           <lightning:button label="enter" variant="Brand" onclick="{!c.calme}"/>
+           <lightning:button label="clear" onclick="{!c.clearme}"/>
+        </lightning:card>
+       </lightning:layoutItem>
+       
+       <lightning:layoutItem size="6">
+       <aura:if isTrue="{!v.flag}">
+           <lightning:card>
+           this is result card
+              <lightning:input label="The Result is" aura:id="rest"/> 
+               
+           </lightning:card>
+           </aura:if>
+       </lightning:layoutItem>
+    </lightning:layout>
+   
+    
+    
+</aura:component>

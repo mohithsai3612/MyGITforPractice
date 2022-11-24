@@ -1,0 +1,17 @@
+<template>
+    <lightning-card>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <header>
+                    <strong>{headerText}</strong>
+                    <p></p>
+                    <strong>{bodyText}</strong>
+                </header>
+                <p></p>
+                <footer class="text-right">
+                  <lightning-button label="Close" variant="Destructive" onclick={closehandler}></lightning-button>  
+                </footer>
+            </div>
+        </div>
+    </lightning-card>
+</template>

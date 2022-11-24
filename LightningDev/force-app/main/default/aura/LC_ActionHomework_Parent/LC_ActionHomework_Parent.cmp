@@ -1,0 +1,11 @@
+<aura:component >    
+    <lightning:card title="parent simple interest">
+        <lightning:input label="Enter the Amount" aura:id="amt"/>
+        <lightning:input label="Enter the Term" aura:id="ter"/>
+        <lightning:input label="Enter the Interest" aura:id="inter"/>
+        
+        <lightning:button label="calculate" onclick="{!c.Calme}" variant="brand"/>
+    </lightning:card>
+    
+    <c:LC_ActionHomework_child aura:id="chld"/>
+</aura:component>

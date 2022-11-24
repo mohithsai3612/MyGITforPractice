@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Normal_Patient</fullName>
+    <active>true</active>
+    <description>For Normal walk-in patient</description>
+    <label>Normal Patient</label>
+    <picklistValues>
+        <picklist>Department__c</picklist>
+        <values>
+            <fullName>Cardio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hematology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ortho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>dermatology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>pedia</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facilities__c</picklist>
+        <values>
+            <fullName>Dedicated Nurse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deluxe Room</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive room</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non Veg MEAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Bed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tv</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wifi</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

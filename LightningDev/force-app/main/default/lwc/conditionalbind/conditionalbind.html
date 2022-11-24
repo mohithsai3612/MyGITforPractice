@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+       <lightning-layout vertical-align="center" class="x-large">
+        <lightning-layout-item flexibility="auto" padding="around-small">
+            <div class="slds-grid_vertical-align-center">
+                Hello {myvalue}!
+            </div>
+        </lightning-layout-item>
+       </lightning-layout>
+        
+        <div class="slds-p-around_medium slds-text-align_center">
+            <lightning-input label="click here" type="checkbox" onchange={handlechange}></lightning-input>
+            <template if:true={showme}>
+                I am Visible
+            </template>
+            <template if:false={showme}>
+                I am not Visible
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,16 @@
+<apex:page controller="constructor_use">
+    <apex:form >
+      <b>{!Msg}</b>  
+    <apex:pageBlock title="Account">
+        <apex:pageBlockSection title="Account creation" columns="1">
+            <apex:inputText label="Account Name" value="{!A.Name}"/>
+            <apex:inputText label="Account Phone" value="{!A.phone}"/>
+            <apex:inputText label="Account Fax" value="{!A.Fax}"/>
+            <apex:inputText label="Account Industry" value="{!A.Industry}"/>
+            <apex:inputText label="Account Rating" value="{!A.Rating}"/>
+            
+            <apex:commandButton value="Click here to Save" action="{!ABC}"/>
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+        </apex:form>
+       </apex:page>

@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Contact search">
+        <lightning-input label="Enter Search text" onchange={calsearch}></lightning-input>
+        <p></p>
+        <b>************result************</b>
+        <lightning-datatable 
+        key-field="Id" 
+        data={mohith.data} 
+        columns={cols}
+        onsave={handlesave}
+        draft-values={draftvalues}>
+        </lightning-datatable>
+    </lightning-card>
+</template>

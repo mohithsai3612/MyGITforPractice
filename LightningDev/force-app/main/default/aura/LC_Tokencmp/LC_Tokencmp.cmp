@@ -1,0 +1,7 @@
+<aura:component >
+	<lightning:card title="Lightning Token">
+        <div class="mybox">
+            Hello Good morning this is lightning Token
+        </div>
+    </lightning:card>
+</aura:component>

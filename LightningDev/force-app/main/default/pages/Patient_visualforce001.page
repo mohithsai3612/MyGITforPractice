@@ -1,0 +1,78 @@
+<apex:page standardController="Account">
+    <b>Loggedin user name:</b>  {!$User.FirstName} {!$User.LastName}<p>
+    
+    </p>
+    <apex:tabPanel >
+<apex:tab label="Tab1-Account input">
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection columns="1">
+            <style>
+                body
+                {
+                background-color:#F29E9E;
+                }
+            .Myinp
+                {
+                border-style: groove;
+                background-color:Tomato;
+                style="color:DodgerBlue;
+                border-style: dashed;
+                } 
+            </style>
+       <apex:inputField value="{!Account.name}" styleClass="Myinp"/>
+            <apex:inputField value="{!Account.Rating}" style="background-color: lightblue;border-style: dashed;"/>
+            <apex:inputField value="{!Account.Billingcity}" styleClass="Myinp"/>
+            <apex:inputField value="{!Account.Industry}" styleClass="Myinp"/>
+            <apex:inputField value="{!Account.Description}" styleClass="Myinp"/>
+            <apex:commandButton value="Click Here to save" title="Please save" action="{!save}"/>
+            <apex:selectRadio label="please select your course" layout="pagedirection">
+                <apex:selectOption itemLabel="salesforce" itemValue="sfdc"/>
+                <apex:selectOption itemLabel="SAP CRM" itemValue="SAP"/>
+                <apex:selectOption itemLabel="MS office" itemValue="Office"/>
+            </apex:selectRadio>
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+        </apex:tab>
+        <apex:tab label="Apollo website">
+            <apex:iframe src="https://www.apollo.com/"/>
+        </apex:tab>
+        <apex:tab label="Tab3-Account output">
+                <apex:pageBlock title="Account Details">
+        <apex:pageBlockSection title="Basic Details">
+            <apex:outputField value="{!Account.name}"/>
+            <apex:outputField value="{!Account.industry}"/>
+            <apex:outputField value="{!Account.billingcity}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Advanced Details">
+            </apex:pageBlockSection>
+         <apex:pageBlockSection title="Contact Details">
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    
+    <apex:pageBlock title="Related Contact Details">
+        <apex:relatedList list="contacts"/>
+        <apex:pageBlockSection title="Related Cases" columns="1">
+            <apex:relatedList list="Cases"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Custom Table-Contact" columns="1">
+                <apex:pageBlockTable value="{!Account.Contacts}" var="AC">
+                    <apex:column value="{!AC.Firstname}"/>
+                    <apex:column value="{!AC.lastname}"/>
+                    <apex:column value="{!AC.phone}"/>
+                    <apex:column value="{!AC.email}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    
+    <apex:pageBlock title="Unrelated Lists">
+        <apex:pageBlockSection title="Patient" columns="1">
+            <apex:listViews type="Patient__c"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="To Be Decided Details">
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        </apex:tab>
+    </apex:tabPanel>
+</apex:page>

@@ -1,0 +1,24 @@
+<apex:page controller="Create_Account_GetSet" >
+    <apex:form >
+        <style>
+        .myMsg
+            {
+            color:{!MsgClr};
+            font-Size:{!MsgSiz};
+            }
+        </style>
+        <div class="myMsg">
+                  <b>{!Msg}</b>  
+        </div>
+   <apex:pageBlock title="Account Creation">
+     <apex:pageBlockSection title="Account Details">
+         <apex:inputText label="name" value="{!name}"/>
+         <apex:inputText label="phone" value="{!phone}"/>
+         <apex:inputText label="fax" value="{!fax}"/>
+         <apex:inputText label="rating" value="{!rating}"/>
+         <apex:inputText label="industry" value="{!industry}"/>
+         <apex:commandButton value="Save" action="{!CreateAcc}"/>
+       </apex:pageBlockSection>   
+     </apex:pageBlock>
+    </apex:form>
+</apex:page>

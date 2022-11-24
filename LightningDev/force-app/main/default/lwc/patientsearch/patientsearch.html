@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Patient Data">
+        <lightning-input label="Enter Search Key" type="search" onchange={calme}></lightning-input>
+        <template for:each={patients.data} for:item=pa>
+         <p key={pa.id}> Patient FirstName:{pa.Patient_First_name__c}---> patient mobile:{pa.Patient_Mobile_number__c}</p>
+        </template>
+    </lightning-card>
+</template>

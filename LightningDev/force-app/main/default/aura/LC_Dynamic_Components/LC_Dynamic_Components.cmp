@@ -1,0 +1,11 @@
+<aura:component >
+	<lightning:card title="Dynamic Components">
+        <lightning:button label="Next"  variant ="brand" onclick="{!c.nextme}"/>
+        <p></p>
+        <b>********Your Processed to Next step*********</b>
+        <p></p>
+        {!v.body}
+        <p></p>
+        <!--<lightning:button label="clear"  variant ="brand" onclick="{!c.clearme}"/>-->
+    </lightning:card>
+</aura:component>

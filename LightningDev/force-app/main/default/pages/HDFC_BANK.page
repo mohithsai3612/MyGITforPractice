@@ -1,0 +1,50 @@
+<apex:page >
+    <div class="hi">
+    <apex:image value="{!$Resource.hdfc}"/>   
+    </div>
+    <apex:tabPanel >
+   <apex:tab label="Account registration">
+        <apex:form >
+            <style>
+            .hi
+            {
+            margin-left:250px;
+            }
+                </style>
+       <apex:pageBlock title="Account Holder">
+       <apex:pageBlockSection columns="3">
+           <apex:inputText label="First Name" style="background-color: lightblue;border-style: dashed;"/>
+           <apex:inputText label="Middle Name" style="background-color: lightblue;border-style: dashed;"/>
+           <apex:inputText label="Last Name" style="background-color: lightblue;border-style: dashed;"/>
+            </apex:pageBlockSection>
+       </apex:pageBlock>
+            <apex:pageBlock title="Father's Name">
+       <apex:pageBlockSection columns="3">
+           <apex:inputText label="First Name"/>
+           <apex:inputText label="Middle Name"/>
+           <apex:inputText label="Last Name"/>
+            </apex:pageBlockSection>
+       </apex:pageBlock>
+            <apex:pageBlock title="Mother's Name">
+       <apex:pageBlockSection columns="3">
+           <apex:inputText label="First Name"/>
+           <apex:inputText label="Middle Name"/>
+           <apex:inputText label="Last Name"/>
+            </apex:pageBlockSection>
+       </apex:pageBlock>
+            <apex:selectRadio label="please select account type" layout="pagedirection">
+                <apex:selectOption itemLabel="saving" itemValue="sav"/>
+                <apex:selectOption itemLabel="demat" itemValue="mat"/>
+                <apex:selectOption itemLabel="loan" itemValue="loan"/>
+                <apex:selectOption itemLabel="investment" itemValue="invest"/>
+                <apex:selectOption itemLabel="credit card" itemValue="credit"/>
+                </apex:selectRadio>
+            </apex:form>
+        </apex:tab>
+        <apex:tab label="Apollo website">
+            <apex:iframe src="https://www.apollohospitals.com/" scrolling="true"/>
+        </apex:tab>
+        <apex:tab label="Investment Details">
+        </apex:tab>
+    </apex:tabPanel>
+</apex:page>

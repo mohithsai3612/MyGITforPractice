@@ -1,0 +1,19 @@
+<aura:component >
+    <aura:attribute name="pempname" type="string"/>
+    <aura:attribute name="pempphne" type="string"/>
+    <aura:attribute name="pempdob" type="Date"/>
+    
+    <lightning:card title="Action Overrride Parent">
+        <lightning:input label="Employee Name" value="{!v.pempname}"/>
+        <lightning:input label="Employee Phone" value="{!v.pempphne}"/>
+        <lightning:input label="Employee Dob" value="{!v.pempdob}"/>
+        
+        <lightning:button label="Submit" onclick="{!c.subme}" variant="brand"/>
+    </lightning:card>
+    
+    
+    
+    
+    
+    <c:LC_ActionOverrride aura:id="chld"/>
+</aura:component>

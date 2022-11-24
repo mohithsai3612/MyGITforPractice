@@ -1,0 +1,8 @@
+<aura:tokens>
+    <aura:token name="brder" value="groove"/>
+    <aura:token name="bdrwdth" value="5px"/>
+    <aura:token name="hedrclr" value="green"/>
+    <aura:token name="fntclr" value="white"/>
+    <aura:token name="backgrclr" value="DodgerBlue"/>
+    <aura:token name="fntfam" value="Lucida Console"/>
+</aura:tokens>

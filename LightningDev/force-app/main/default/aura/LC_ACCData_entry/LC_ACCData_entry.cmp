@@ -1,0 +1,23 @@
+<aura:component controller="eventSave_ACC">
+    <aura:registerEvent name="firsty" type="c:LE_ACC"/>
+    <aura:attribute name="caccname" type="string"/>
+    <aura:attribute name="caccPhone" type="string"/>
+    <aura:attribute name="caccFax" type="string"/>
+    <aura:attribute name="caccRating" type="string"/>
+    <aura:attribute name="caccIndustry" type="string"/>
+    
+    <aura:attribute name="flag" type="Boolean" default="false"/>
+    
+    <lightning:card title="Account" iconName="standard:account">
+        <lightning:input label="Enter the Name" value="{!v.caccname}"/>
+        <lightning:input label="Enter the Phone" value="{!v.caccPhone}"/>
+        <lightning:input label="Enter the Fax" value="{!v.caccFax}"/>
+        <lightning:input label="Enter the Rating" value="{!v.caccRating}"/>
+        <lightning:input label="Enter the Industry" value="{!v.caccIndustry}"/>
+        
+        <lightning:button label="Submit" onclick="{!c.callme}"/>
+       <aura:if isTrue="{!v.flag}">
+           <lightning:button label="save" onclick="{!c.saveme}"/>
+        </aura:if>
+    </lightning:card>
+</aura:component>

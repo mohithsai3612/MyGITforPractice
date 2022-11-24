@@ -1,0 +1,3 @@
+<apex:page controller="xml_serialize_eg1">
+    {!xmlstring}
+</apex:page>

@@ -1,0 +1,19 @@
+<aura:component >
+	<div class="mybox">
+    Hi Mohith sai
+    </div>
+   
+    <lightning:card title="Account" class="mycard">
+        <lightning:input label="Enter the Account Name" class="myinp"/>
+        <lightning:input label="Enter the Account Phone" class="myinp"/>
+        <lightning:input type="checkbox" label="Remember me" checked="true"/>
+        <lightning:button label="submit"/>
+    </lightning:card>
+    
+    <lightning:layout>
+    <lightning:layoutItem size="12">
+        <lightning:card title="Account" iconName="standard:account"/>
+        </lightning:layoutItem>
+    </lightning:layout>
+    
+</aura:component>

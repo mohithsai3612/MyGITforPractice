@@ -1,0 +1,19 @@
+<apex:page controller="polymorphism">
+    <apex:form >
+   <apex:pageBlock title="calculator">
+       <apex:pageBlockSection columns="1">
+        <apex:inputText label="enter first number" value="{!num}"/>
+           <apex:inputText label="enter second number" value="{!num1}"/>
+           <apex:inputText label="enter third number" value="{!num2}"/>
+           
+           <apex:selectRadio label="select your choice" value="{!ch}">
+               <apex:selectOption itemLabel="sum upto given even" itemValue="SO"/>
+               <apex:selectOption itemLabel="area of rectangle" itemValue="area"/>
+               <apex:selectOption itemLabel="grater number" itemValue="GR"/>
+           </apex:selectRadio>
+           <apex:commandButton value="click here to calculate" action="{!masturu}"/>
+           <apex:outputText label="the result is: " value="{!result}"></apex:outputText>
+       </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

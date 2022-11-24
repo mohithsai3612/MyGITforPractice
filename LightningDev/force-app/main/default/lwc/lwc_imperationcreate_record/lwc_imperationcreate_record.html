@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Imperation create Campaigns">
+        <lightning-input label="Campaigns Name" onchange={nameme}></lightning-input>
+        <lightning-input label="Campaigns Type" onchange={typeme}></lightning-input>
+        <lightning-input label="Campaigns StartDate" onchange={StartDate} type="Date"></lightning-input>
+        <lightning-input label="Campaigns EndDate" onchange={CloseDate} type="Date"></lightning-input>
+
+        <lightning-button label="save" onclick={saveme} variant="SUCCESS"></lightning-button>
+    </lightning-card>
+</template>

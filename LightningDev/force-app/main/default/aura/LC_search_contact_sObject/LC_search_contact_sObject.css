@@ -1,0 +1,7 @@
+.THIS .mybox
+{
+    Background:DodgerBlue;
+    color:white;
+    Border-width:2px;
+    border-style:groove;
+}

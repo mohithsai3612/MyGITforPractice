@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="ComboBox with static values " icon-name="custom:custom67">
+        <p class="slds-p-horizontal_small">
+        <template if:true={options}>
+            <div class="slds-m-around-medium">
+            <lightning-combobox
+                    name="progress"
+                    label="Status"
+                    value={selectedvalue}
+                    placeholder="Select Progress"
+                    options={options}
+                    onchange={handleChange} >
+                </lightning-combobox>
+        
+            <p>Selected value is: {selectedvalue}</p>
+        </div>
+        </template>
+    </p>
+    </lightning-card>
+
+
+
+
+
+    <lightning-card title="ComboBox with type values " icon-name="custom:custom67">
+        <p class="slds-p-horizontal_small">
+        <template if:true={typevalues.data}>
+            <div class="slds-m-around-medium">
+            <lightning-combobox
+                    name="Industry Type"
+                    label="Industry Type"
+                    value={selectedindustry}
+                    placeholder="Select Progress"
+                    options={typevalues.data.values}
+                    onchange={handleIndustryChange} >
+                </lightning-combobox>
+        
+            <p>Selected value is: {selectedindustry}</p>
+        </div>
+        </template>
+    </p>
+    </lightning-card>
+</template>

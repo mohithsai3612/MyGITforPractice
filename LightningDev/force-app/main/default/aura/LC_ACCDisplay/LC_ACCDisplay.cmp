@@ -1,0 +1,20 @@
+<aura:component >
+	<aura:attribute name="daccname" type="string"/>
+    <aura:attribute name="daccPhone" type="string"/>
+    <aura:attribute name="daccFax" type="string"/>
+    <aura:attribute name="daccRating" type="string"/>
+    <aura:attribute name="daccIndustry" type="string"/>
+    
+    <aura:handler name="firsty" event="c:LE_ACC" action="{!c.displayme}"/>
+    
+    <c:LC_ACCData_entry/>
+    <lightning:card title="Details Display" iconName="standard:account">
+        Account Name:{!v.daccname} <p></p>
+        Account Phone:{!v.daccPhone} <p></p>
+        Account Fax:{!v.daccFax} <p></p>
+        Account Rating:{!v.daccRating} <p></p>
+        Account Industry:{!v.daccIndustry} 
+    
+    </lightning:card>
+    
+</aura:component>

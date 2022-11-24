@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="flag" type="boolean" default="true"/>
+	<lightning:card title="Dynamic Component">
+        <lightning:button label="Submit" onclick="{!c.callme}"/>
+    </lightning:card>
+    <b>*******Dynamic Component will Appear*******</b><p></p>
+    {!v.body}
+</aura:component>

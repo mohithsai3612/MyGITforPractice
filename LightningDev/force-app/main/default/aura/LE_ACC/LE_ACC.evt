@@ -1,0 +1,7 @@
+<aura:event type="COMPONENT" description="Event template">
+    <aura:attribute name="accname" type="string"/>
+    <aura:attribute name="accPhone" type="string"/>
+    <aura:attribute name="accFax" type="string"/>
+    <aura:attribute name="accRating" type="string"/>
+    <aura:attribute name="accIndustry" type="string"/>
+</aura:event>

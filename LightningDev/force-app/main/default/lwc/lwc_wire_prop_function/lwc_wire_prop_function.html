@@ -1,0 +1,15 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Contact Search" icon-name="standard:contact">
+        <lightning-input label="Enter the Data" type="search" onchange={searchme}></lightning-input> 
+      <p></p>
+     <b>********Wire Property*******</b>
+      <template if:true={mydata}>
+     <lightning-datatable key-field="id" data={mydata} columns={col}></lightning-datatable>
+    </template>
+
+    <template if:true={mydata}>
+        error = {myerror}
+    </template>
+    </lightning-card> 
+</template>

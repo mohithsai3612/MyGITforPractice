@@ -1,0 +1,12 @@
+<apex:page controller="soqlquery" >
+   <apex:form >
+    <apex:pageBlock title="Account search">
+       <apex:pageBlockTable value="{!accs}" var="a">
+           <apex:column value="{!a.name}"/>
+           <apex:column value="{!a.phone}"/>
+           <apex:column value="{!a.fax}"/>
+           <apex:column value="{!a.industry}"/>
+        </apex:pageBlockTable>
+       </apex:pageBlock>
+    </apex:form> 
+</apex:page>
